@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Taihō Coffee & Tea — Thương hiệu cà phê Việt Nam hiện đại, mang đến trải nghiệm take-away cao cấp với hương vị đậm đà và phong cách đương đại.">
+  <meta name="keywords" content="Taihō, coffee, tea, cà phê, trà, Việt Nam, take-away, premium, Đà Nẵng">
+  <meta name="author" content="Taihō Coffee & Tea">
+  <meta property="og:title" content="Taihō Coffee & Tea — Cà phê Việt hiện đại">
+  <meta property="og:description" content="Trải nghiệm cà phê take-away cao cấp mang đậm bản sắc Việt">
+  <meta property="og:type" content="website">
+  <title>Taihō Coffee & Tea — Cà phê Việt hiện đại</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/signature.css">
+  <link rel="stylesheet" href="css/lifestyle.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/booking.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       Loading Screen
+       ═══════════════════════════════════════════════ -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-logo">Taih<span>ō</span></div>
+    <div class="loading-bar">
+      <div class="loading-bar__fill"></div>
+    </div>
+  </div>
+
+  <!-- Cursor glow (desktop) -->
+  <div class="cursor-glow"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       Navigation Bar
+       ═══════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo">
+        <div>
+          Taih<span class="navbar__logo-accent">ō</span>
+          <span class="navbar__logo-sub">Coffee & Tea</span>
+        </div>
+      </a>
+
+      <div class="navbar__nav">
+        <a href="#gioi-thieu" class="navbar__link">Giới thiệu</a>
+        <a href="#dac-san" class="navbar__link">Đặc sản</a>
+        <a href="#phong-cach" class="navbar__link">Phong cách</a>
+        <a href="#thuc-don" class="navbar__link">Thực đơn</a>
+        <a href="#dat-hang" class="navbar__link">Đặt hàng</a>
+      </div>
+
+      <div class="navbar__actions">
+        <button class="theme-toggle" aria-label="Chuyển đổi giao diện sáng/tối">
+          <div class="theme-toggle__circle">
+            <span class="theme-toggle__icon">🌙</span>
+          </div>
+        </button>
+        <a href="#dat-hang" class="navbar__cta">Đặt ngay</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="navbar__hamburger" aria-label="Menu điều hướng">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="navbar__mobile-menu">
+    <a href="#gioi-thieu" class="navbar__link">Giới thiệu</a>
+    <a href="#dac-san" class="navbar__link">Đặc sản</a>
+    <a href="#phong-cach" class="navbar__link">Phong cách</a>
+    <a href="#thuc-don" class="navbar__link">Thực đơn</a>
+    <a href="#dat-hang" class="navbar__link">Đặt hàng</a>
+    <button class="theme-toggle" aria-label="Chuyển đổi giao diện">
+      <div class="theme-toggle__circle">
+        <span class="theme-toggle__icon">🌙</span>
+      </div>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       Hero Section
+       ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__bg-gradient"></div>
+      <div class="hero__bokeh hero__bokeh--1"></div>
+      <div class="hero__bokeh hero__bokeh--2"></div>
+      <div class="hero__bokeh hero__bokeh--3"></div>
+      <canvas id="hero-particles"></canvas>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__text">
+        <span class="hero__label">Taihō Coffee & Tea</span>
+        <h1 class="hero__title">
+          Hương vị<br><em>Việt Nam</em><br>đương đại
+        </h1>
+        <p class="hero__desc">
+          Nâng tầm trải nghiệm cà phê take-away với phong cách hiện đại, 
+          giữ trọn hồn Việt trong từng ly thức uống thủ công.
+        </p>
+        <div class="hero__actions">
+          <a href="#thuc-don" class="btn btn--primary">
+            Khám phá thực đơn
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="#gioi-thieu" class="btn btn--ghost">
+            Câu chuyện của chúng tôi
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__image-wrapper">
+          <div class="hero__glow"></div>
+          <div class="hero__steam">
+            <div class="hero__steam-line"></div>
+            <div class="hero__steam-line"></div>
+            <div class="hero__steam-line"></div>
+          </div>
+          <img 
+            src="img/z7981177274318_c658a95e3a160d01bf6faf7d0abda96c.jpg" 
+            alt="Signature Taihō coffee — Cà phê sữa đá cao cấp" 
+            class="hero__image"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span class="hero__scroll-text">Cuộn xuống</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       About Section
+       ═══════════════════════════════════════════════ -->
+  <section class="section about" id="gioi-thieu">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual reveal-left">
+          <div class="about__image-frame">
+            <img 
+              src="img/z7981177286529_fd728c5d5449135076d0bf1e4afd554a.jpg" 
+              alt="Quá trình pha chế cà phê sữa đá Taihō"
+              loading="lazy"
+            >
+          </div>
+          <div class="about__frame-accent"></div>
+        </div>
+
+        <div class="about__text reveal-right">
+          <span class="section__label">Về chúng tôi</span>
+          <h2 class="section__title">Câu chuyện<br>cà phê Việt</h2>
+          <p class="section__subtitle">
+            Taihō ra đời từ niềm đam mê mãnh liệt với cà phê Việt Nam. 
+            Chúng tôi tin rằng một ly cà phê take-away cũng có thể mang đến 
+            trải nghiệm cao cấp — từ hạt cà phê được chọn lọc kỹ lưỡng đến 
+            cách trình bày tinh tế, mọi chi tiết đều được chăm chút.
+          </p>
+
+          <div class="about__philosophy">
+            <div class="about__stat reveal delay-2">
+              <span class="about__stat-number">100%</span>
+              <span class="about__stat-label">Cà phê Việt Nam</span>
+            </div>
+            <div class="about__stat reveal delay-3">
+              <span class="about__stat-number">30+</span>
+              <span class="about__stat-label">Thức uống sáng tạo</span>
+            </div>
+            <div class="about__stat reveal delay-4">
+              <span class="about__stat-number">2K+</span>
+              <span class="about__stat-label">Khách hàng tin yêu</span>
+            </div>
+            <div class="about__stat reveal delay-5">
+              <span class="about__stat-number">5★</span>
+              <span class="about__stat-label">Đánh giá trung bình</span>
+            </div>
+          </div>
+
+          <div class="about__story reveal delay-3">
+            <div class="about__story-items">
+              <div class="about__story-item">
+                <div class="about__story-year">Triết lý</div>
+                <p class="about__story-desc">
+                  Mỗi ly cà phê là một tác phẩm — kết hợp giữa di sản ẩm thực Việt 
+                  và phong cách sống đô thị hiện đại.
+                </p>
+              </div>
+              <div class="about__story-item">
+                <div class="about__story-year">Sứ mệnh</div>
+                <p class="about__story-desc">
+                  Đưa cà phê Việt ra thế giới qua trải nghiệm take-away đẳng cấp, 
+                  phù hợp với nhịp sống nhanh của giới trẻ thành thị.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       Signature Coffee Section
+       ═══════════════════════════════════════════════ -->
+  <section class="section signature" id="dac-san">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Đặc sản</span>
+        <h2 class="section__title">Thức uống<br>đặc trưng</h2>
+        <hr class="divider">
+        <p class="section__subtitle">
+          Những ly thức uống signature được chế tác từ nguyên liệu tuyển chọn,
+          mang đậm hồn Việt trong từng ngụm.
+        </p>
+      </div>
+
+      <div class="signature__grid">
+        <!-- Card 1: Cà phê sữa đá -->
+        <div class="product-card reveal delay-1">
+          <div class="product-card__image-wrapper">
+            <div class="product-card__steam">
+              <span></span><span></span><span></span>
+            </div>
+            <img 
+              src="img/z7981177382184_cd1de13b6f433c50bffcd79f5c3f5ba8.jpg" 
+              alt="Cà phê sữa đá Taihō" 
+              class="product-card__image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__category">Cà phê</span>
+            <h3 class="product-card__name">Cà Phê Sữa Đá</h3>
+            <p class="product-card__desc">Cà phê phin truyền thống hòa quyện sữa đặc, đá viên mát lạnh — hương vị kinh điển Sài Gòn.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">35.000đ</span>
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Bạc Xỉu -->
+        <div class="product-card reveal delay-2">
+          <div class="product-card__image-wrapper">
+            <div class="product-card__steam">
+              <span></span><span></span><span></span>
+            </div>
+            <img 
+              src="img/z7981177254077_8b7ab7f6850e7845b74377ccdd6d2713.jpg" 
+              alt="Bạc xỉu Taihō" 
+              class="product-card__image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__category">Cà phê</span>
+            <h3 class="product-card__name">Bạc Xỉu Kem Cheese</h3>
+            <p class="product-card__desc">Bạc xỉu ngọt dịu phủ lớp kem cheese béo mịn — sự kết hợp hoàn hảo giữa truyền thống và hiện đại.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">42.000đ</span>
+              <span class="product-card__badge">Signature</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Matcha Espresso -->
+        <div class="product-card reveal delay-3">
+          <div class="product-card__image-wrapper">
+            <div class="product-card__steam">
+              <span></span><span></span><span></span>
+            </div>
+            <img 
+              src="img/z7981177359437_1adb59d6c392f0d3072041db827796ea.jpg" 
+              alt="Matcha Espresso Taihō" 
+              class="product-card__image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__category">Fusion</span>
+            <h3 class="product-card__name">Matcha Espresso</h3>
+            <p class="product-card__desc">Matcha Nhật Bản gặp espresso Việt Nam — lớp màu tương phản đẹp mắt, hương vị độc đáo.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">48.000đ</span>
+              <span class="product-card__badge">New</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Cà phê trứng -->
+        <div class="product-card reveal delay-4">
+          <div class="product-card__image-wrapper">
+            <div class="product-card__steam">
+              <span></span><span></span><span></span>
+            </div>
+            <img 
+              src="img/z7981177370818_65507fe4ced51aaaaccbef5e3001be83.jpg" 
+              alt="Cà phê trứng Taihō" 
+              class="product-card__image"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__category">Đặc biệt</span>
+            <h3 class="product-card__name">Cà Phê Trứng</h3>
+            <p class="product-card__desc">Cà phê trứng Hà Nội kinh điển — lớp kem trứng béo ngậy phủ trên nền cà phê đậm đà.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">45.000đ</span>
+              <span class="product-card__badge">Heritage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       Lifestyle / Experience Section
+       ═══════════════════════════════════════════════ -->
+  <section class="section lifestyle" id="phong-cach">
+    <div class="lifestyle__bg-accent"></div>
+
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Trải nghiệm</span>
+        <h2 class="section__title">Phong cách<br>take-away</h2>
+        <hr class="divider">
+        <p class="section__subtitle">
+          Nhanh chóng, tiện lợi, nhưng không bao giờ thỏa hiệp về chất lượng.
+          Taihō mang đến trải nghiệm cà phê đô thị đúng nghĩa.
+        </p>
+      </div>
+
+      <!-- Marquee -->
+      <div class="lifestyle__marquee reveal">
+        <div class="lifestyle__marquee-track">
+          <div class="lifestyle__marquee-item">Premium Take-Away <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Vietnamese Coffee <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Urban Lifestyle <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Modern Heritage <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Saigon Vibes <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Premium Take-Away <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Vietnamese Coffee <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Urban Lifestyle <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Modern Heritage <span>◆</span></div>
+          <div class="lifestyle__marquee-item">Saigon Vibes <span>◆</span></div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="lifestyle__features">
+        <div class="feature-card reveal delay-1">
+          <span class="feature-card__icon">⚡</span>
+          <h3 class="feature-card__title">Phục vụ nhanh</h3>
+          <p class="feature-card__desc">
+            Đặt hàng trước, nhận ngay trong 3 phút. 
+            Tiết kiệm thời gian cho nhịp sống bận rộn của bạn.
+          </p>
+        </div>
+        <div class="feature-card reveal delay-2">
+          <span class="feature-card__icon">🎨</span>
+          <h3 class="feature-card__title">Bao bì cao cấp</h3>
+          <p class="feature-card__desc">
+            Thiết kế packaging tinh tế, thân thiện môi trường — 
+            mỗi ly thức uống là một phụ kiện thời trang.
+          </p>
+        </div>
+        <div class="feature-card reveal delay-3">
+          <span class="feature-card__icon">☕</span>
+          <h3 class="feature-card__title">Nguyên liệu chọn lọc</h3>
+          <p class="feature-card__desc">
+            100% cà phê Robusta & Arabica Việt Nam, 
+            rang mộc thủ công theo phương pháp truyền thống.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image Showcase -->
+      <div class="lifestyle__showcase">
+        <div class="showcase-item reveal-scale delay-1">
+          <img 
+            src="img/z7981177325240_23679cca69a2310d8083dfe3ca82f4f8.jpg" 
+            alt="Ly cà phê take-away Taihō" 
+            loading="lazy"
+          >
+          <div class="showcase-item__overlay">
+            <span class="showcase-item__label">Take-away experience</span>
+          </div>
+        </div>
+        <div class="showcase-item reveal-scale delay-2">
+          <img 
+            src="img/z7981177266919_b333698984f636ca7296de3ad2d46f9b.jpg" 
+            alt="Matcha latte Taihō" 
+            loading="lazy"
+          >
+          <div class="showcase-item__overlay">
+            <span class="showcase-item__label">Matcha Fusion</span>
+          </div>
+        </div>
+        <div class="showcase-item reveal-scale delay-3">
+          <img 
+            src="img/z7981177264620_6a4ee2b9716fc47e368b9c2a90248d50.jpg" 
+            alt="Cà phê cam Taihō" 
+            loading="lazy"
+          >
+          <div class="showcase-item__overlay">
+            <span class="showcase-item__label">Orange Coffee</span>
+          </div>
+        </div>
+        <div class="showcase-item reveal-scale delay-4">
+          <img 
+            src="img/z7981177318886_8bf54d82539bad7b78ea5112380507b1.jpg" 
+            alt="Matcha xoài Taihō" 
+            loading="lazy"
+          >
+          <div class="showcase-item__overlay">
+            <span class="showcase-item__label">Matcha & Mango</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       Featured Menu Section
+       ═══════════════════════════════════════════════ -->
+  <section class="section menu" id="thuc-don">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Thực đơn</span>
+        <h2 class="section__title">Menu<br>đặc sắc</h2>
+        <hr class="divider">
+        <p class="section__subtitle">
+          Khám phá bộ sưu tập thức uống đa dạng, 
+          từ cà phê truyền thống đến trà hoa quả sáng tạo.
+        </p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="menu__tabs reveal">
+        <button class="menu__tab active" data-category="all">Tất cả</button>
+        <button class="menu__tab" data-category="coffee">Cà phê</button>
+        <button class="menu__tab" data-category="tea">Trà</button>
+        <button class="menu__tab" data-category="fruit">Nước ép</button>
+        <button class="menu__tab" data-category="special">Đặc biệt</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu__grid">
+        <!-- Coffee items -->
+        <div class="menu-item reveal delay-1" data-category="coffee">
+          <div class="menu-item__image">
+            <img src="img/z7981177232192_a37bc1d259bfb5f76c09c1080f0e7e63.jpg" alt="Cold Brew" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Cold Brew Nitro</h4>
+            <p class="menu-item__desc">Cà phê ủ lạnh 24h, mịn như kem</p>
+          </div>
+          <span class="menu-item__price">45.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-2" data-category="coffee">
+          <div class="menu-item__image">
+            <img src="img/z7981177382184_cd1de13b6f433c50bffcd79f5c3f5ba8.jpg" alt="Cà phê sữa đá" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Cà Phê Sữa Đá</h4>
+            <p class="menu-item__desc">Cà phê phin truyền thống, sữa đặc</p>
+          </div>
+          <span class="menu-item__price">35.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-3" data-category="coffee">
+          <div class="menu-item__image">
+            <img src="img/z7981177241689_c60b2e2cdc0033a0eb10b8bf0d434f18.jpg" alt="Cà phê kem" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Cà Phê Kem Tươi</h4>
+            <p class="menu-item__desc">Cà phê espresso phủ kem tươi béo ngậy</p>
+          </div>
+          <span class="menu-item__price">40.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-4" data-category="coffee">
+          <div class="menu-item__image">
+            <img src="img/z7981177370818_65507fe4ced51aaaaccbef5e3001be83.jpg" alt="Cà phê trứng" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Cà Phê Trứng</h4>
+            <p class="menu-item__desc">Kem trứng béo ngậy trên nền cà phê đậm</p>
+          </div>
+          <span class="menu-item__price">45.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-5" data-category="coffee">
+          <div class="menu-item__image">
+            <img src="img/z7981177338623_56051dd46329989af28cd9f5cfe54d46.jpg" alt="Cà phê cam" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Cà Phê Jelly</h4>
+            <p class="menu-item__desc">Cà phê sữa phủ jelly thạch giòn sần sật</p>
+          </div>
+          <span class="menu-item__price">42.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-6" data-category="coffee">
+          <div class="menu-item__image">
+            <img src="img/z7981177254077_8b7ab7f6850e7845b74377ccdd6d2713.jpg" alt="Bạc xỉu" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Bạc Xỉu Kem Cheese</h4>
+            <p class="menu-item__desc">Bạc xỉu đậm đà phủ kem phô mai</p>
+          </div>
+          <span class="menu-item__price">42.000đ</span>
+        </div>
+
+        <!-- Tea items -->
+        <div class="menu-item reveal delay-1" data-category="tea">
+          <div class="menu-item__image">
+            <img src="img/z7981177256754_292208b0f2df1cd8a6d3431fc0f8f69d.jpg" alt="Matcha Latte" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Matcha Latte</h4>
+            <p class="menu-item__desc">Matcha Uji Nhật Bản, sữa tươi thanh mát</p>
+          </div>
+          <span class="menu-item__price">48.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-2" data-category="tea">
+          <div class="menu-item__image">
+            <img src="img/z7981177375475_3ed14b5ecdf673ef2d24404bd24391af.jpg" alt="Trà xanh" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Trà Xanh Sữa</h4>
+            <p class="menu-item__desc">Trà xanh tươi mát hòa quyện sữa đặc</p>
+          </div>
+          <span class="menu-item__price">40.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-3" data-category="tea">
+          <div class="menu-item__image">
+            <img src="img/z7981177318133_093692cc02a1b1f4c77f335c5a2a2188.jpg" alt="Matcha dâu" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Matcha Dâu Tây</h4>
+            <p class="menu-item__desc">Matcha kết hợp dâu tây tươi, ba tầng màu</p>
+          </div>
+          <span class="menu-item__price">52.000đ</span>
+        </div>
+
+        <!-- Fruit items -->
+        <div class="menu-item reveal delay-1" data-category="fruit">
+          <div class="menu-item__image">
+            <img src="img/z7981177350445_a2f006c548e61319323e4e8ab9ab1f45.jpg" alt="Nước ép dâu" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Dâu Tây Tươi</h4>
+            <p class="menu-item__desc">Dâu tây tươi nguyên chất, thêm đá viên</p>
+          </div>
+          <span class="menu-item__price">45.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-2" data-category="fruit">
+          <div class="menu-item__image">
+            <img src="img/z7981177285637_a880395235967b46308d19d1e828bb73.jpg" alt="Nước ép cam" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Cam Vàng Bạc Hà</h4>
+            <p class="menu-item__desc">Cam tươi vắt, lá bạc hà thơm mát</p>
+          </div>
+          <span class="menu-item__price">38.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-3" data-category="fruit">
+          <div class="menu-item__image">
+            <img src="img/z7981177311893_6f8574f51b47a90740e58b8a322e1ce7.jpg" alt="Nước quất" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Quất Mật Ong</h4>
+            <p class="menu-item__desc">Tắc tươi, mật ong rừng, bạc hà</p>
+          </div>
+          <span class="menu-item__price">35.000đ</span>
+        </div>
+
+        <!-- Special items -->
+        <div class="menu-item reveal delay-1" data-category="special">
+          <div class="menu-item__image">
+            <img src="img/z7981177359437_1adb59d6c392f0d3072041db827796ea.jpg" alt="Matcha Espresso" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Matcha Espresso</h4>
+            <p class="menu-item__desc">Fusion matcha Nhật và espresso Việt</p>
+          </div>
+          <span class="menu-item__price">48.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-2" data-category="special">
+          <div class="menu-item__image">
+            <img src="img/z7981177308327_dbb3fe9b8a0608cec6dc860ac6517957.jpg" alt="Bơ sữa matcha" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Bơ Matcha Dừa</h4>
+            <p class="menu-item__desc">Bơ sáp, matcha, nước cốt dừa — ba vị hoà quyện</p>
+          </div>
+          <span class="menu-item__price">55.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-3" data-category="special">
+          <div class="menu-item__image">
+            <img src="img/z7981177308772_8ab28c5330ce333164b786b674e3d62b.jpg" alt="Xoài matcha" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Xoài Matcha Cream</h4>
+            <p class="menu-item__desc">Xoài chín dầy, kem tươi, matcha đá xay</p>
+          </div>
+          <span class="menu-item__price">52.000đ</span>
+        </div>
+
+        <div class="menu-item reveal delay-4" data-category="special">
+          <div class="menu-item__image">
+            <img src="img/z7981177390028_4c8460692c313d72a242c0b6b2338029.jpg" alt="Trà cam rosemary" loading="lazy">
+          </div>
+          <div class="menu-item__info">
+            <h4 class="menu-item__name">Trà Cam Rosemary</h4>
+            <p class="menu-item__desc">Trà đen, cam tươi, húng rosemary thơm nồng</p>
+          </div>
+          <span class="menu-item__price">50.000đ</span>
+        </div>
+      </div>
+
+      <div class="menu__cta reveal">
+        <a href="#dat-hang" class="btn btn--outline">
+          Xem toàn bộ thực đơn
+          <span class="btn__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       Booking / Order Section
+       ═══════════════════════════════════════════════ -->
+  <section class="section booking" id="dat-hang">
+    <div class="booking__bg"></div>
+    <div class="container">
+      <div class="booking__content">
+        <!-- Info Panel -->
+        <div class="booking__info reveal-left">
+          <span class="section__label">Đặt hàng</span>
+          <h2 class="section__title">Đặt ngay,<br>nhận liền</h2>
+          <p class="section__subtitle">
+            Đặt trước qua form dưới đây hoặc liên hệ trực tiếp. 
+            Ly cà phê của bạn sẽ sẵn sàng khi bạn đến.
+          </p>
+
+          <div class="booking__info-list">
+            <div class="booking__info-item">
+              <div class="booking__info-icon">📍</div>
+              <div class="booking__info-text">
+                <h4>Địa chỉ</h4>
+                <p>123 Đường Trần Hưng Đạo, Quận Sơn Trà, Đà Nẵng</p>
+              </div>
+            </div>
+            <div class="booking__info-item">
+              <div class="booking__info-icon">⏰</div>
+              <div class="booking__info-text">
+                <h4>Giờ mở cửa</h4>
+                <p>7:00 — 22:00 hàng ngày</p>
+              </div>
+            </div>
+            <div class="booking__info-item">
+              <div class="booking__info-icon">📱</div>
+              <div class="booking__info-text">
+                <h4>Liên hệ</h4>
+                <p>0901 234 567 • hello@taiho.coffee</p>
+              </div>
+            </div>
+            <div class="booking__info-item">
+              <div class="booking__info-icon">🚀</div>
+              <div class="booking__info-text">
+                <h4>Giao hàng</h4>
+                <p>Miễn phí giao trong bán kính 3km</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="booking__form-card reveal-right">
+          <h3 class="booking__form-title">Đặt hàng trước</h3>
+          <p class="booking__form-subtitle">Điền thông tin để nhận thức uống nhanh nhất</p>
+
+          <form class="booking__form" id="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="customer-name">Họ tên</label>
+                <input type="text" id="customer-name" placeholder="Nguyễn Văn A" required>
+              </div>
+              <div class="form-group">
+                <label for="customer-phone">Số điện thoại</label>
+                <input type="tel" id="customer-phone" placeholder="0901 234 567" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="order-type">Hình thức</label>
+              <select id="order-type">
+                <option value="pickup">Đến lấy tại quán</option>
+                <option value="delivery">Giao hàng tận nơi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="order-time">Thời gian nhận</label>
+              <input type="time" id="order-time" value="08:00">
+            </div>
+            <div class="form-group">
+              <label for="order-note">Ghi chú đơn hàng</label>
+              <textarea id="order-note" placeholder="Ví dụ: 2 cà phê sữa đá, 1 matcha latte, ít đường..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="booking__submit">Gửi đơn hàng</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════════════ -->
+  <footer class="footer section">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">Taih<span>ō</span> Coffee & Tea</div>
+          <p class="footer__tagline">
+            Thương hiệu cà phê Việt Nam hiện đại — nơi di sản gặp gỡ đương đại, 
+            mang đến trải nghiệm take-away cao cấp cho thế hệ mới.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">𝐅</a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">𝐈</a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">𝐓</a>
+            <a href="#" class="footer__social-link" aria-label="Zalo">𝐙</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Khám phá</h4>
+          <div class="footer__links">
+            <a href="#gioi-thieu" class="footer__link">Về chúng tôi</a>
+            <a href="#dac-san" class="footer__link">Thức uống đặc trưng</a>
+            <a href="#thuc-don" class="footer__link">Thực đơn đầy đủ</a>
+            <a href="#dat-hang" class="footer__link">Đặt hàng</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Hỗ trợ</h4>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Câu hỏi thường gặp</a>
+            <a href="#" class="footer__link">Chính sách giao hàng</a>
+            <a href="#" class="footer__link">Điều khoản sử dụng</a>
+            <a href="#" class="footer__link">Liên hệ hợp tác</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Liên hệ</h4>
+          <div class="footer__links">
+            <span class="footer__link">123 Trần Hưng Đạo</span>
+            <span class="footer__link">Quận Sơn Trà, Đà Nẵng</span>
+            <span class="footer__link">0901 234 567</span>
+            <a href="mailto:hello@taiho.coffee" class="footer__link">hello@taiho.coffee</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 Taihō Coffee & Tea. All rights reserved.</p>
+        <button class="footer__back-top" aria-label="Về đầu trang">
+          Về đầu trang <span class="footer__back-top-arrow">↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

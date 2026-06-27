@@ -1,0 +1,108 @@
+/* ============================================================
+   Taihō Coffee & Tea — Design Tokens & CSS Custom Properties
+   ============================================================ */
+
+:root {
+  /* ── Primary Palette ── */
+  --deep-navy:      #1D2645;
+  --warm-beige:     #F3EFE8;
+  --soft-ivory:     #FAF8F4;
+
+  /* ── Accent Palette ── */
+  --coffee-brown:   #6B4A35;
+  --caramel-gold:   #C58A4A;
+
+  /* ── Derived Colors ── */
+  --navy-light:     #283254;
+  --navy-lighter:   #2F3B60;
+  --beige-dark:     #E8E0D3;
+  --ivory-dark:     #EDE8DE;
+  --gold-light:     #D4A06A;
+  --gold-glow:      rgba(197, 138, 74, 0.35);
+  --brown-light:    #7D5C45;
+
+  /* ── Semantic – Dark Theme (default) ── */
+  --bg-primary:     var(--deep-navy);
+  --bg-secondary:   var(--navy-light);
+  --bg-tertiary:    var(--navy-lighter);
+  --text-primary:   var(--soft-ivory);
+  --text-secondary: var(--warm-beige);
+  --text-muted:     rgba(243, 239, 232, 0.55);
+  --accent-1:       var(--caramel-gold);
+  --accent-2:       var(--coffee-brown);
+  --border-color:   rgba(197, 138, 74, 0.15);
+  --card-bg:        rgba(40, 50, 84, 0.55);
+  --card-border:    rgba(197, 138, 74, 0.12);
+  --glass-bg:       rgba(29, 38, 69, 0.65);
+  --glass-border:   rgba(243, 239, 232, 0.08);
+  --shadow-sm:      0 2px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md:      0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-lg:      0 16px 64px rgba(0, 0, 0, 0.45);
+  --shadow-glow:    0 0 40px rgba(197, 138, 74, 0.15);
+  --overlay:        rgba(29, 38, 69, 0.85);
+
+  /* ── Typography ── */
+  --font-heading:   'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body:      'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-accent:    'Outfit', 'Inter', sans-serif;
+
+  /* ── Font Sizes (fluid) ── */
+  --fs-hero:        clamp(3.2rem, 8vw, 7rem);
+  --fs-hero-sub:    clamp(1.1rem, 2vw, 1.5rem);
+  --fs-section:     clamp(2.2rem, 5vw, 4rem);
+  --fs-section-sub: clamp(1rem, 1.8vw, 1.25rem);
+  --fs-card-title:  clamp(1.2rem, 2vw, 1.5rem);
+  --fs-body:        clamp(0.95rem, 1.2vw, 1.1rem);
+  --fs-small:       clamp(0.8rem, 1vw, 0.9rem);
+  --fs-label:       clamp(0.7rem, 0.9vw, 0.8rem);
+
+  /* ── Spacing ── */
+  --space-xs:       0.5rem;
+  --space-sm:       1rem;
+  --space-md:       2rem;
+  --space-lg:       4rem;
+  --space-xl:       6rem;
+  --space-2xl:      10rem;
+  --section-pad:    clamp(5rem, 12vh, 10rem);
+
+  /* ── Layout ── */
+  --max-width:      1280px;
+  --max-width-sm:   960px;
+  --navbar-h:       72px;
+  --radius-sm:      8px;
+  --radius-md:      16px;
+  --radius-lg:      24px;
+  --radius-xl:      32px;
+  --radius-full:    9999px;
+
+  /* ── Transitions ── */
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:  0.2s;
+  --duration:       0.4s;
+  --duration-slow:  0.7s;
+  --duration-cinematic: 1.2s;
+}
+
+/* ── Light Theme Overrides ── */
+[data-theme="light"] {
+  --bg-primary:     var(--soft-ivory);
+  --bg-secondary:   var(--warm-beige);
+  --bg-tertiary:    var(--ivory-dark);
+  --text-primary:   var(--deep-navy);
+  --text-secondary: #3A4266;
+  --text-muted:     rgba(29, 38, 69, 0.5);
+  --accent-1:       var(--coffee-brown);
+  --accent-2:       var(--caramel-gold);
+  --border-color:   rgba(107, 74, 53, 0.12);
+  --card-bg:        rgba(255, 255, 255, 0.7);
+  --card-border:    rgba(107, 74, 53, 0.1);
+  --glass-bg:       rgba(250, 248, 244, 0.7);
+  --glass-border:   rgba(29, 38, 69, 0.06);
+  --shadow-sm:      0 2px 12px rgba(29, 38, 69, 0.06);
+  --shadow-md:      0 8px 32px rgba(29, 38, 69, 0.08);
+  --shadow-lg:      0 16px 64px rgba(29, 38, 69, 0.1);
+  --shadow-glow:    0 0 40px rgba(107, 74, 53, 0.08);
+  --overlay:        rgba(250, 248, 244, 0.88);
+}

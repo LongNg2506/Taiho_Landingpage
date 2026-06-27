@@ -1,0 +1,195 @@
+/* ============================================================
+   Taihō Coffee & Tea — Signature Coffee Section
+   ============================================================ */
+
+.signature {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background accent */
+.signature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(197, 138, 74, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .signature::before {
+  background: 
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(107, 74, 53, 0.03) 0%, transparent 60%);
+}
+
+/* ── Cards Grid ── */
+.signature__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* ── Product Card ── */
+.product-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  overflow: hidden;
+  transition: all var(--duration) var(--ease-out);
+  cursor: pointer;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(197, 138, 74, 0.05) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease-out);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(197, 138, 74, 0.25);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.product-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(135deg, 
+    rgba(197, 138, 74, 0.05) 0%, 
+    rgba(107, 74, 53, 0.03) 100%);
+}
+
+.product-card__image {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+  transition: transform var(--duration-slow) var(--ease-out);
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
+}
+
+[data-theme="light"] .product-card__image {
+  filter: drop-shadow(0 10px 25px rgba(29, 38, 69, 0.1));
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* Steam effect on hover */
+.product-card__steam {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease-out);
+  pointer-events: none;
+}
+
+.product-card:hover .product-card__steam {
+  opacity: 1;
+}
+
+.product-card__steam span {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to top, rgba(243, 239, 232, 0.12), transparent);
+  border-radius: 50%;
+  animation: steamWisp 2.5s ease-out infinite;
+}
+
+.product-card__steam span:nth-child(1) { left: 25%; animation-delay: 0s; }
+.product-card__steam span:nth-child(2) { left: 50%; animation-delay: 0.5s; }
+.product-card__steam span:nth-child(3) { left: 75%; animation-delay: 1s; }
+
+[data-theme="light"] .product-card__steam span {
+  background: linear-gradient(to top, rgba(29, 38, 69, 0.06), transparent);
+}
+
+.product-card__info {
+  position: relative;
+  z-index: 1;
+}
+
+.product-card__category {
+  font-family: var(--font-accent);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-1);
+  margin-bottom: 0.4rem;
+}
+
+.product-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-card-title);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.product-card__desc {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card__price {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-1);
+}
+
+.product-card__badge {
+  font-family: var(--font-accent);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.3em 0.8em;
+  border-radius: var(--radius-full);
+  background: rgba(197, 138, 74, 0.12);
+  color: var(--accent-1);
+  border: 1px solid rgba(197, 138, 74, 0.2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .signature__grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}

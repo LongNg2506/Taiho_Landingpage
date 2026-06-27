@@ -1,0 +1,199 @@
+/* ============================================================
+   Taihō Coffee & Tea — Lifestyle / Experience Section
+   ============================================================ */
+
+.lifestyle {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accent background */
+.lifestyle__bg-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, 
+    var(--bg-primary) 0%, 
+    var(--bg-secondary) 50%, 
+    var(--bg-primary) 100%);
+  pointer-events: none;
+}
+
+/* ── Marquee ── */
+.lifestyle__marquee {
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lifestyle__marquee-track {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.lifestyle__marquee-item {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  white-space: nowrap;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.lifestyle__marquee-item span {
+  color: var(--accent-1);
+  font-size: 0.3em;
+}
+
+/* ── Feature cards row ── */
+.lifestyle__features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card {
+  position: relative;
+  padding: clamp(2rem, 3vw, 3rem);
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  transition: all var(--duration) var(--ease-out);
+}
+
+.feature-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-1), transparent);
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease-out);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 138, 74, 0.2);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card:hover::after {
+  opacity: 1;
+}
+
+.feature-card__icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.feature-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-card-title);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature-card__desc {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ── Image showcase ── */
+.lifestyle__showcase {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.showcase-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+}
+
+.showcase-item:nth-child(1) {
+  grid-row: 1 / 3;
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.showcase-item:hover img {
+  transform: scale(1.08);
+}
+
+.showcase-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-md);
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease-out);
+}
+
+.showcase-item:hover .showcase-item__overlay {
+  opacity: 1;
+}
+
+.showcase-item__label {
+  font-family: var(--font-accent);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--soft-ivory);
+  letter-spacing: 0.1em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .lifestyle__features {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .lifestyle__showcase {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+  }
+  .showcase-item:nth-child(1) {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .lifestyle__showcase {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .showcase-item {
+    aspect-ratio: 16/10;
+  }
+}
