@@ -12,17 +12,18 @@
   <title>Taihō Coffee & Tea — Cà phê Việt hiện đại</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/signature.css">
-  <link rel="stylesheet" href="css/lifestyle.css">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/booking.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/variables.css?v=3">
+  <link rel="stylesheet" href="css/base.css?v=3">
+  <link rel="stylesheet" href="css/animations.css?v=3">
+  <link rel="stylesheet" href="css/navbar.css?v=3">
+  <link rel="stylesheet" href="css/hero.css?v=3">
+  <link rel="stylesheet" href="css/about.css?v=3">
+  <link rel="stylesheet" href="css/signature.css?v=3">
+  <link rel="stylesheet" href="css/lifestyle.css?v=3">
+  <link rel="stylesheet" href="css/menu.css?v=3">
+  <link rel="stylesheet" href="css/booking.css?v=3">
+  <link rel="stylesheet" href="css/recruitment.css?v=3">
+  <link rel="stylesheet" href="css/footer.css?v=3">
 </head>
 <body>
 
@@ -57,12 +58,13 @@
         <a href="#phong-cach" class="navbar__link">Phong cách</a>
         <a href="#thuc-don" class="navbar__link">Thực đơn</a>
         <a href="#dat-hang" class="navbar__link">Đặt hàng</a>
+        <a href="#tuyen-dung" class="navbar__link">Tuyển dụng</a>
       </div>
 
       <div class="navbar__actions">
         <button class="theme-toggle" aria-label="Chuyển đổi giao diện sáng/tối">
           <div class="theme-toggle__circle">
-            <span class="theme-toggle__icon">🌙</span>
+            <span class="theme-toggle__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
           </div>
         </button>
         <a href="#dat-hang" class="navbar__cta">Đặt ngay</a>
@@ -84,9 +86,10 @@
     <a href="#phong-cach" class="navbar__link">Phong cách</a>
     <a href="#thuc-don" class="navbar__link">Thực đơn</a>
     <a href="#dat-hang" class="navbar__link">Đặt hàng</a>
+    <a href="#tuyen-dung" class="navbar__link">Tuyển dụng</a>
     <button class="theme-toggle" aria-label="Chuyển đổi giao diện">
       <div class="theme-toggle__circle">
-        <span class="theme-toggle__icon">🌙</span>
+        <span class="theme-toggle__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
       </div>
     </button>
   </div>
@@ -95,14 +98,33 @@
        Hero Section
        ═══════════════════════════════════════════════ -->
   <section class="hero" id="hero">
+    <!-- Video Background -->
+    <div class="hero__video-wrapper">
+      <video 
+        class="hero__video" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        preload="auto"
+        poster="img/z7981177286529_fd728c5d5449135076d0bf1e4afd554a.jpg"
+      >
+        <source src="video/hero-coffee.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Dark overlay for readability -->
+    <div class="hero__overlay"></div>
+
+    <!-- Ambient effects on top of video -->
     <div class="hero__bg">
-      <div class="hero__bg-gradient"></div>
       <div class="hero__bokeh hero__bokeh--1"></div>
       <div class="hero__bokeh hero__bokeh--2"></div>
       <div class="hero__bokeh hero__bokeh--3"></div>
       <canvas id="hero-particles"></canvas>
     </div>
 
+    <!-- Centered content -->
     <div class="hero__content">
       <div class="hero__text">
         <span class="hero__label">Taihō Coffee & Tea</span>
@@ -121,22 +143,6 @@
           <a href="#gioi-thieu" class="btn btn--ghost">
             Câu chuyện của chúng tôi
           </a>
-        </div>
-      </div>
-
-      <div class="hero__visual">
-        <div class="hero__image-wrapper">
-          <div class="hero__glow"></div>
-          <div class="hero__steam">
-            <div class="hero__steam-line"></div>
-            <div class="hero__steam-line"></div>
-            <div class="hero__steam-line"></div>
-          </div>
-          <img 
-            src="img/z7981177274318_c658a95e3a160d01bf6faf7d0abda96c.jpg" 
-            alt="Signature Taihō coffee — Cà phê sữa đá cao cấp" 
-            class="hero__image"
-          >
         </div>
       </div>
     </div>
@@ -367,7 +373,7 @@
       <!-- Features -->
       <div class="lifestyle__features">
         <div class="feature-card reveal delay-1">
-          <span class="feature-card__icon">⚡</span>
+          <span class="feature-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
           <h3 class="feature-card__title">Phục vụ nhanh</h3>
           <p class="feature-card__desc">
             Đặt hàng trước, nhận ngay trong 3 phút. 
@@ -375,7 +381,7 @@
           </p>
         </div>
         <div class="feature-card reveal delay-2">
-          <span class="feature-card__icon">🎨</span>
+          <span class="feature-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
           <h3 class="feature-card__title">Bao bì cao cấp</h3>
           <p class="feature-card__desc">
             Thiết kế packaging tinh tế, thân thiện môi trường — 
@@ -383,7 +389,7 @@
           </p>
         </div>
         <div class="feature-card reveal delay-3">
-          <span class="feature-card__icon">☕</span>
+          <span class="feature-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="2" x2="6" y2="4"></line><line x1="10" y1="2" x2="10" y2="4"></line><line x1="14" y1="2" x2="14" y2="4"></line></svg></span>
           <h3 class="feature-card__title">Nguyên liệu chọn lọc</h3>
           <p class="feature-card__desc">
             100% cà phê Robusta & Arabica Việt Nam, 
@@ -672,28 +678,35 @@
 
           <div class="booking__info-list">
             <div class="booking__info-item">
-              <div class="booking__info-icon">📍</div>
+              <div class="booking__info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
               <div class="booking__info-text">
-                <h4>Địa chỉ</h4>
-                <p>123 Đường Trần Hưng Đạo, Quận Sơn Trà, Đà Nẵng</p>
+                <h4>Cơ sở 1</h4>
+                <p><a href="https://www.google.com/maps/search/846+Ng%C3%B4+Quy%E1%BB%81n,+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener" class="booking__map-link">846 Ngô Quyền, Đà Nẵng ↗</a></p>
               </div>
             </div>
             <div class="booking__info-item">
-              <div class="booking__info-icon">⏰</div>
+              <div class="booking__info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+              <div class="booking__info-text">
+                <h4>Cơ sở 2 <span class="badge badge--coming">Sắp khai trương</span></h4>
+                <p><a href="https://www.google.com/maps/search/125+Ch%C3%A2u+Th%E1%BB%8B+V%C4%A9nh+T%E1%BA%BF,+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener" class="booking__map-link">125 Châu Thị Vĩnh Tế, Đà Nẵng ↗</a></p>
+              </div>
+            </div>
+            <div class="booking__info-item">
+              <div class="booking__info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
               <div class="booking__info-text">
                 <h4>Giờ mở cửa</h4>
-                <p>7:00 — 22:00 hàng ngày</p>
+                <p>6:00 — 22:00 hàng ngày</p>
               </div>
             </div>
             <div class="booking__info-item">
-              <div class="booking__info-icon">📱</div>
+              <div class="booking__info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
               <div class="booking__info-text">
                 <h4>Liên hệ</h4>
-                <p>0901 234 567 • hello@taiho.coffee</p>
+                <p>0766.88.44.21 (Tài)</p>
               </div>
             </div>
             <div class="booking__info-item">
-              <div class="booking__info-icon">🚀</div>
+              <div class="booking__info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 3 20 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="13.5" cy="18.5" r="2.5"></circle></svg></div>
               <div class="booking__info-text">
                 <h4>Giao hàng</h4>
                 <p>Miễn phí giao trong bán kính 3km</p>
@@ -741,6 +754,140 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════
+       Recruitment Section
+       ═══════════════════════════════════════════════ -->
+  <section class="section recruitment" id="tuyen-dung">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Tuyển dụng</span>
+        <h2 class="section__title">Gia nhập<br>đội ngũ Taihō</h2>
+        <hr class="divider">
+        <p class="section__subtitle">
+          Mở rộng cơ sở — Cùng nhau phát triển. 
+          Chúng tôi đang tìm kiếm những Barista đam mê cà phê.
+        </p>
+      </div>
+
+      <div class="recruitment__content">
+        <!-- Position Card -->
+        <div class="recruit-card reveal-left">
+          <div class="recruit-card__header">
+            <span class="recruit-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="2" x2="6" y2="4"></line><line x1="10" y1="2" x2="10" y2="4"></line><line x1="14" y1="2" x2="14" y2="4"></line></svg></span>
+            <div>
+              <h3 class="recruit-card__title">Barista</h3>
+              <span class="recruit-card__count">05 vị trí • Full-time & Part-time</span>
+            </div>
+          </div>
+
+          <div class="recruit-card__body">
+            <div class="recruit-card__section">
+              <h4>Yêu cầu</h4>
+              <ul>
+                <li>Ưu tiên ứng viên gắn bó lâu dài</li>
+                <li>Sinh viên có thể làm 4–5 ca/tuần</li>
+                <li>Yêu thích pha chế và dịch vụ khách hàng</li>
+              </ul>
+            </div>
+
+            <div class="recruit-card__section">
+              <h4>Thời gian làm việc</h4>
+              <div class="recruit-card__shifts">
+                <div class="shift-group">
+                  <span class="shift-group__label">Full-time</span>
+                  <ul>
+                    <li>6h – 14h</li>
+                    <li>14h – 22h</li>
+                    <li class="shift-note">Làm 6 ngày/tuần, nghỉ 1 ngày</li>
+                  </ul>
+                </div>
+                <div class="shift-group">
+                  <span class="shift-group__label">Part-time</span>
+                  <ul>
+                    <li>6h – 11h</li>
+                    <li>13h – 18h</li>
+                    <li>18h – 22h</li>
+                    <li class="shift-note">Hỗ trợ sắp xếp ca linh hoạt phù hợp lịch học</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits & Contact -->
+        <div class="recruit-benefits reveal-right">
+          <div class="recruit-card__section">
+            <h4>Quyền lợi</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
+                <div>
+                  <strong>Lương Full-time</strong>
+                  <p>4.500.000 – 5.500.000đ</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg></span>
+                <div>
+                  <strong>Lương Part-time</strong>
+                  <p>19k – 22k/h <span class="text-muted">(Thử việc 1 tháng: 18k/h)</span></p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 10 3 12 0v-5"></path></svg></span>
+                <div>
+                  <strong>Đào tạo pha chế</strong>
+                  <p>Chuyên nghiệp, bài bản</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="2" x2="6" y2="4"></line><line x1="10" y1="2" x2="10" y2="4"></line><line x1="14" y1="2" x2="14" y2="4"></line></svg></span>
+                <div>
+                  <strong>Uống sản phẩm</strong>
+                  <p>Miễn phí trong ca làm việc</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span>
+                <div>
+                  <strong>Thăng tiến</strong>
+                  <p>Cơ hội lên Trưởng ca</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recruit-card__section recruit-contact">
+            <h4>Địa điểm làm việc</h4>
+            <div class="recruit-locations">
+              <div class="recruit-location">
+                <strong>Cơ sở 1:</strong>
+                <a href="https://www.google.com/maps/search/846+Ng%C3%B4+Quy%E1%BB%81n,+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener">846 Ngô Quyền, Đà Nẵng ↗</a>
+              </div>
+              <div class="recruit-location">
+                <strong>Cơ sở 2 <span class="badge badge--coming">Sắp khai trương</span>:</strong>
+                <a href="https://www.google.com/maps/search/125+Ch%C3%A2u+Th%E1%BB%8B+V%C4%A9nh+T%E1%BA%BF,+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener">125 Châu Thị Vĩnh Tế, Đà Nẵng ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="recruit-cta">
+            <div class="recruit-cta__info">
+              <span class="recruit-cta__label">Liên hệ ứng tuyển</span>
+              <a href="tel:0766884421" class="recruit-cta__phone">0766.88.44.21 (Tài)</a>
+              <p class="recruit-cta__note">Gửi CV hoặc liên hệ qua Zalo</p>
+            </div>
+            <a href="https://zalo.me/0766884421" target="_blank" rel="noopener" class="btn btn--primary recruit-cta__btn">
+              Liên hệ qua Zalo
+              <span class="btn__arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
        Footer
        ═══════════════════════════════════════════════ -->
   <footer class="footer section">
@@ -767,6 +914,7 @@
             <a href="#dac-san" class="footer__link">Thức uống đặc trưng</a>
             <a href="#thuc-don" class="footer__link">Thực đơn đầy đủ</a>
             <a href="#dat-hang" class="footer__link">Đặt hàng</a>
+            <a href="#tuyen-dung" class="footer__link">Tuyển dụng</a>
           </div>
         </div>
 
@@ -783,10 +931,9 @@
         <div class="footer__column">
           <h4 class="footer__column-title">Liên hệ</h4>
           <div class="footer__links">
-            <span class="footer__link">123 Trần Hưng Đạo</span>
-            <span class="footer__link">Quận Sơn Trà, Đà Nẵng</span>
-            <span class="footer__link">0901 234 567</span>
-            <a href="mailto:hello@taiho.coffee" class="footer__link">hello@taiho.coffee</a>
+            <a href="https://www.google.com/maps/search/846+Ng%C3%B4+Quy%E1%BB%81n,+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener" class="footer__link">CS1: 846 Ngô Quyền, Đà Nẵng</a>
+            <a href="https://www.google.com/maps/search/125+Ch%C3%A2u+Th%E1%BB%8B+V%C4%A9nh+T%E1%BA%BF,+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener" class="footer__link">CS2: 125 Châu Thị Vĩnh Tế, Đà Nẵng</a>
+            <a href="tel:0766884421" class="footer__link">0766.88.44.21 (Tài)</a>
           </div>
         </div>
       </div>
@@ -803,6 +950,7 @@
   <!-- Scripts -->
   <script src="js/theme.js"></script>
   <script src="js/particles.js"></script>
+  <script src="js/slideshow.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
 
